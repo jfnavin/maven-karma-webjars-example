@@ -15,3 +15,6 @@ This type of setup might be encountered in a Java service + Web UI project for e
 * Karma
 * Jasmine
 * AngularJS
+
+## License
+This project and all of its contents are release under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
