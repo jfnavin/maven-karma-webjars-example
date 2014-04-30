@@ -21,6 +21,29 @@
 
 	<build>
 		<plugins>
+
+			<!-- 
+				Allows the application to be run using: 
+				>> mvn jetty:run
+				 
+				Application will be available at: 
+				http://localhost:8080/maven-karma-webjars-example/ 
+			-->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.2.0.M0</version>
+				<configuration>
+					<webApp>
+						<contextPath>/maven-karma-webjars-example</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+			<!-- 
+				Unpack webjar dependencies to the /target/dependency folder for use 
+				by the CI Karma configuration. 
+			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -38,6 +61,10 @@
 				</executions>
 			</plugin>
 
+			<!--
+				Install node, npm and karma locally and execute the JS unit tests 
+				during the test lifecycle phase. 
+			-->
 			<plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
