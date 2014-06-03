@@ -4,6 +4,8 @@ This is an example project that runs JavaScript unit tests (in this case [Jasmin
 
 This type of setup might be encountered in a Java service + Web UI project for example, or in an enterprise environment where CI builds are standardised around a Java + Maven workflow.
 
+For more information check out [this blog post](http://jamesnavin.net/2014/05/25/maven-karma-webjars/) describing the example.
+
 ## Technologies / libraries used
 
 * Java 1.7+
